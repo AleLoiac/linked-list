@@ -134,4 +134,32 @@ export class LinkedList {
     string += "null";
     return string;
   }
+
+  insertAt(value, index) {
+    if (index < 0 || index > this.size()) {
+      console.log("Index out of bounds");
+      return null;
+    }
+
+    const newNode = new Node();
+    newNode.value = value;
+
+    if (index === 0) {
+      newNode.nextNode = this.head;
+      this.head = newNode;
+      return;
+    }
+
+    let i = 0;
+    let tmp = this.head;
+    let prev = null;
+
+    while (i < index) {
+      prev = tmp;
+      tmp = tmp.nextNode;
+      i++;
+    }
+    prev.nextNode = newNode;
+    newNode.nextNode = tmp;
+  }
 }
