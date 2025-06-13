@@ -123,4 +123,15 @@ export class LinkedList {
     }
     return null;
   }
+
+  toString() {
+    let string = "";
+    let tmp = this.head;
+    while (tmp !== null) {
+      string += `( ${tmp.value} ) -> `;
+      tmp = tmp.nextNode;
+    }
+    string += "null";
+    return string;
+  }
 }
