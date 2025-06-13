@@ -57,4 +57,18 @@ export class LinkedList {
     }
     return tmp;
   }
+
+  at(index) {
+    let tmp = this.head;
+    let i = 0;
+
+    while (tmp !== null) {
+      if (i === index) {
+        return tmp;
+      }
+      tmp = tmp.nextNode;
+      i++;
+    }
+    console.log("Index out of bounds");
+  }
 }
