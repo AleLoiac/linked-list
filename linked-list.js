@@ -45,4 +45,16 @@ export class LinkedList {
 
     return counter;
   }
+
+  getHead() {
+    return this.head;
+  }
+
+  getTail() {
+    let tmp = this.head;
+    while (tmp.nextNode != null) {
+      tmp = tmp.nextNode;
+    }
+    return tmp;
+  }
 }
