@@ -51,6 +51,8 @@ export class LinkedList {
   }
 
   getTail() {
+    if (this.head === null) return null;
+
     let tmp = this.head;
     while (tmp.nextNode !== null) {
       tmp = tmp.nextNode;
@@ -70,5 +72,6 @@ export class LinkedList {
       i++;
     }
     console.log("Index out of bounds");
+    return null;
   }
 }
