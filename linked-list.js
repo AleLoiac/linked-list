@@ -74,4 +74,24 @@ export class LinkedList {
     console.log("Index out of bounds");
     return null;
   }
+
+  pop() {
+    if (this.head === null) {
+      return;
+    }
+
+    if (this.head.nextNode === null) {
+      this.head = null;
+      return;
+    }
+
+    let prev = null;
+    let curr = this.head;
+
+    while (curr.nextNode !== null) {
+      prev = curr;
+      curr = curr.nextNode;
+    }
+    prev.nextNode = null;
+  }
 }
