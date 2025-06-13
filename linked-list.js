@@ -14,7 +14,7 @@ export class LinkedList {
     } else {
       let tmp = this.head;
 
-      while (tmp.nextNode != null) {
+      while (tmp.nextNode !== null) {
         tmp = tmp.nextNode;
       }
       tmp.nextNode = newNode;
@@ -38,7 +38,7 @@ export class LinkedList {
     counter++;
 
     let tmp = this.head;
-    while (tmp.nextNode != null) {
+    while (tmp.nextNode !== null) {
       tmp = tmp.nextNode;
       counter++;
     }
@@ -52,7 +52,7 @@ export class LinkedList {
 
   getTail() {
     let tmp = this.head;
-    while (tmp.nextNode != null) {
+    while (tmp.nextNode !== null) {
       tmp = tmp.nextNode;
     }
     return tmp;
