@@ -109,4 +109,18 @@ export class LinkedList {
     }
     return false;
   }
+
+  find(value) {
+    let index = 0;
+
+    let tmp = this.head;
+    while (tmp !== null) {
+      if (tmp.value === value) {
+        return index;
+      }
+      tmp = tmp.nextNode;
+      index++;
+    }
+    return null;
+  }
 }
