@@ -162,4 +162,27 @@ export class LinkedList {
     prev.nextNode = newNode;
     newNode.nextNode = tmp;
   }
+
+  removeAt(index) {
+    if (index < 0 || index >= this.size()) {
+      console.log("Index out of bounds");
+      return null;
+    }
+
+    if (index === 0) {
+      this.head = this.head.nextNode;
+      return;
+    }
+
+    let i = 0;
+    let tmp = this.head;
+    let prev = null;
+
+    while (i < index) {
+      prev = tmp;
+      tmp = tmp.nextNode;
+      i++;
+    }
+    prev.nextNode = tmp.nextNode;
+  }
 }
