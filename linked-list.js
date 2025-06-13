@@ -28,4 +28,21 @@ export class LinkedList {
 
     this.head = newNode;
   }
+
+  size() {
+    let counter = 0;
+
+    if (this.head === null) {
+      return counter;
+    }
+    counter++;
+
+    let tmp = this.head;
+    while (tmp.nextNode != null) {
+      tmp = tmp.nextNode;
+      counter++;
+    }
+
+    return counter;
+  }
 }
