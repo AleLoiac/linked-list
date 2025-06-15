@@ -1,0 +1,26 @@
+{
+  "name": "@aleloiac/linked-list",
+  "version": "1.0.0",
+  "description": "A simple implementation of a singly linked list in JavaScript, built with ES6 classes",
+  "main": "./src/linked-list.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleLoiac/linked-list.git"
+  },
+  "author": "AleLoiac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleLoiac/linked-list/issues"
+  },
+  "homepage": "https://github.com/AleLoiac/linked-list#readme",
+  "exports": {
+    "./LinkedList": "./src/linked-list.js",
+    "./Node": "./src/node.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
